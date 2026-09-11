@@ -1,0 +1,238 @@
+/* ================= SHARE RESOURCE PAGE ================= */
+
+.share-resource-page {
+  min-height: 100vh;
+  background: #f7f3e9;
+  color: #10251f;
+}
+
+/* ================= NAVBAR ================= */
+
+.share-resource-nav {
+  height: 78px;
+  padding: 0 6%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #fffdf8;
+  border-bottom: 1px solid #ddd7ca;
+}
+
+.share-resource-logo {
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: #9b1c24;
+}
+
+.share-resource-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.share-resource-nav-button {
+  border: none;
+  background: transparent;
+
+  font-size: 21px;
+  cursor: pointer;
+}
+
+.share-resource-profile-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border: none;
+  background: transparent;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.share-resource-profile-circle {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #123d32;
+  color: white;
+}
+
+/* ================= CONTENT ================= */
+
+.share-resource-content {
+  width: 88%;
+  max-width: 850px;
+
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+/* ================= HEADER ================= */
+
+.share-resource-header {
+  margin-bottom: 40px;
+}
+
+.share-resource-header h1 {
+  margin: 0;
+
+  font-size: clamp(42px, 5vw, 62px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+
+  color: #10251f;
+}
+
+.share-resource-header p:last-child {
+  max-width: 700px;
+
+  margin-top: 18px;
+
+  color: #60736d;
+
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ================= FORM ================= */
+
+.share-resource-form {
+  padding: 40px;
+
+  background: #fffdf8;
+
+  border: 1px solid #ddd7ca;
+  border-radius: 22px;
+
+  box-shadow: 0 12px 35px rgba(16, 37, 31, 0.06);
+}
+
+.share-form-group {
+  margin-bottom: 25px;
+}
+
+.share-form-group label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #10251f;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.share-form-group input,
+.share-form-group select,
+.share-form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 14px 16px;
+
+  border: 1px solid #d8d1c4;
+  border-radius: 10px;
+
+  background: #fff;
+
+  color: #10251f;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.share-form-group input:focus,
+.share-form-group select:focus,
+.share-form-group textarea:focus {
+  border-color: #123d32;
+
+  box-shadow: 0 0 0 3px rgba(18, 61, 50, 0.08);
+}
+
+.share-form-group textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.share-form-group small {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #8a9792;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ================= SUBMIT BUTTON ================= */
+
+.share-resource-submit {
+  width: 100%;
+
+  margin-top: 5px;
+
+  padding: 15px 22px;
+
+  border: none;
+  border-radius: 28px;
+
+  background: #f5bb2f;
+  color: #10251f;
+
+  font-size: 15px;
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.share-resource-submit:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 650px) {
+
+  .share-resource-content {
+    width: 90%;
+    padding: 45px 0;
+  }
+
+  .share-resource-nav {
+    padding: 0 5%;
+  }
+
+  .share-resource-header h1 {
+    font-size: 42px;
+  }
+
+  .share-resource-header p:last-child {
+    font-size: 16px;
+  }
+
+  .share-resource-form {
+    padding: 25px;
+  }
+
+}

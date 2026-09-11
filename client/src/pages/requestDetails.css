@@ -1,0 +1,283 @@
+/* ================= REQUEST DETAILS PAGE ================= */
+
+.request-details-page {
+  min-height: 100vh;
+  background: #f7f3e9;
+  color: #10251f;
+}
+
+/* ================= NAVBAR ================= */
+
+.request-details-nav {
+  height: 78px;
+  padding: 0 6%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #fffdf8;
+  border-bottom: 1px solid #ddd7ca;
+}
+
+.request-details-logo {
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: #9b1c24;
+}
+
+.request-details-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.request-details-nav-button {
+  border: none;
+  background: transparent;
+
+  font-size: 21px;
+  cursor: pointer;
+}
+
+.request-details-profile-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border: none;
+  background: transparent;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.request-details-profile-circle {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #123d32;
+  color: white;
+}
+
+/* ================= CONTENT ================= */
+
+.request-details-content {
+  width: 88%;
+  max-width: 1050px;
+
+  margin: 0 auto;
+  padding: 65px 0;
+}
+
+/* ================= BACK BUTTON ================= */
+
+.back-to-requests {
+  margin-bottom: 25px;
+
+  border: none;
+  background: transparent;
+
+  color: #9b1c24;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.back-to-requests:hover {
+  text-decoration: underline;
+}
+
+/* ================= REQUEST CARD ================= */
+
+.request-details-card {
+  padding: 45px;
+
+  background: #fffdf8;
+  border: 1px solid #ddd7ca;
+  border-radius: 22px;
+
+  box-shadow: 0 12px 35px rgba(16, 37, 31, 0.06);
+}
+
+/* ================= CATEGORY ================= */
+
+.request-details-category-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  margin-bottom: 30px;
+}
+
+.request-details-icon {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 17px;
+  background: #eef1df;
+
+  font-size: 30px;
+}
+
+.request-details-category {
+  color: #e58c35;
+
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+/* ================= TITLE ================= */
+
+.request-details-card h1 {
+  max-width: 800px;
+
+  margin: 0;
+
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -2px;
+
+  color: #10251f;
+}
+
+/* ================= DESCRIPTION ================= */
+
+.request-details-description {
+  max-width: 800px;
+
+  margin: 25px 0 30px;
+
+  color: #60736d;
+
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* ================= META ================= */
+
+.request-details-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.details-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #60736d;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ================= DIVIDER ================= */
+
+.request-details-divider {
+  height: 1px;
+
+  margin: 35px 0;
+
+  background: #ddd7ca;
+}
+
+/* ================= HELP SECTION ================= */
+
+.help-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.help-section h2 {
+  margin: 0 0 7px;
+
+  font-size: 24px;
+  color: #10251f;
+}
+
+.help-section p {
+  margin: 0;
+
+  color: #60736d;
+  font-size: 14px;
+}
+
+.details-help-button {
+  flex-shrink: 0;
+
+  padding: 14px 25px;
+
+  border: none;
+  border-radius: 28px;
+
+  background: #f5bb2f;
+  color: #10251f;
+
+  font-size: 15px;
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.details-help-button:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 650px) {
+
+  .request-details-content {
+    width: 90%;
+    padding: 45px 0;
+  }
+
+  .request-details-nav {
+    padding: 0 5%;
+  }
+
+  .request-details-card {
+    padding: 28px;
+  }
+
+  .request-details-card h1 {
+    font-size: 38px;
+  }
+
+  .request-details-description {
+    font-size: 16px;
+  }
+
+  .help-section {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .details-help-button {
+    width: 100%;
+  }
+
+}

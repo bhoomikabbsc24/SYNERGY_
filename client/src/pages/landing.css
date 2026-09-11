@@ -1,4 +1,4 @@
-:root {
+:root {                                         
   --cream: #f7f3ea;
   --paper: #fffdf7;
   --ink: #17251f;
@@ -63,6 +63,14 @@ a {
 .mark {
   display: flex;
   align-items: center;
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
 }
 
 .logo-img {
@@ -78,12 +86,28 @@ a {
   font-weight: 600;
 }
 
-.nav-links a {
+.nav-links a,
+.nav-links button {
+  appearance: none;
+  -webkit-appearance: none;
   transition: color 0.2s ease;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .nav-links a:hover,
-.nav-links a.active {
+.nav-links a.active,
+.nav-links button:hover,
+.nav-links button.active {
   color: var(--orange);
 }
 
@@ -787,10 +811,24 @@ footer span {
     border-top: 1px solid var(--border);
   }
 
-  .mobile-drawer a {
+  .mobile-drawer a,
+  .mobile-drawer button {
+    appearance: none;
+    -webkit-appearance: none;
     padding: 16px 20px;
-
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
     font-weight: 600;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .mobile-drawer button:hover {
+    color: var(--orange);
   }
 
   .hero-grid {
@@ -932,4 +970,4 @@ footer span {
     flex-direction: column;
     align-items: flex-start;
   }
-}
+  }

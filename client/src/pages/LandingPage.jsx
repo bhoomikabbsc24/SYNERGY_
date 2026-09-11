@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./landing.css";
 import synergyLogo from "../assets/synergy-logo.png";
 
 function LandingPage() {
+  const navigate = useNavigate();
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("top");
 
@@ -31,6 +34,18 @@ function LandingPage() {
     setMenuOpen(false);
   };
 
+  const goToSection = (section) => {
+    closeMenu();
+
+    const element = document.getElementById(section);
+
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div className="synergy-page">
 
@@ -39,48 +54,61 @@ function LandingPage() {
       <nav className="nav">
         <div className="wrap nav-wrap">
 
-          <a href="#top" className="mark" onClick={closeMenu}>
+          <button
+            className="mark"
+            onClick={() => {
+              closeMenu();
+              goToSection("top");
+            }}
+          >
             <img
               src={synergyLogo}
               alt="Synergy"
               className="logo-img"
             />
-          </a>
+          </button>
 
           <div className="nav-links">
-            <a
-              href="#how"
+
+            <button
+              onClick={() => goToSection("how")}
               className={activeSection === "how" ? "active" : ""}
             >
               How it works
-            </a>
+            </button>
 
-            <a
-              href="#pillars"
+            <button
+              onClick={() => goToSection("pillars")}
               className={activeSection === "pillars" ? "active" : ""}
             >
               Ask for anything
-            </a>
+            </button>
 
-            <a
-              href="#trust"
+            <button
+              onClick={() => goToSection("trust")}
               className={activeSection === "trust" ? "active" : ""}
             >
               Trust score
-            </a>
+            </button>
 
-            <a
-              href="#impact"
+            <button
+              onClick={() => goToSection("impact")}
               className={activeSection === "impact" ? "active" : ""}
             >
               Community wins
-            </a>
+            </button>
+
           </div>
 
           <div className="nav-actions">
-            <a href="#join" className="btn btn-primary">
+
+            {/* JOIN FREE → REGISTER */}
+            <button
+              className="btn btn-primary"
+              onClick={() => navigate("/register")}
+            >
               Join free
-            </a>
+            </button>
 
             <button
               className="menu-btn"
@@ -92,33 +120,44 @@ function LandingPage() {
               <span></span>
               <span></span>
             </button>
+
           </div>
 
         </div>
 
-        {/* MOBILE MENU */}
+
+        {/* ================= MOBILE MENU ================= */}
 
         <div className={`mobile-drawer ${menuOpen ? "open" : ""}`}>
-          <a href="#how" onClick={closeMenu}>
+
+          <button onClick={() => goToSection("how")}>
             How it works
-          </a>
+          </button>
 
-          <a href="#pillars" onClick={closeMenu}>
+          <button onClick={() => goToSection("pillars")}>
             Ask for anything
-          </a>
+          </button>
 
-          <a href="#trust" onClick={closeMenu}>
+          <button onClick={() => goToSection("trust")}>
             Trust score
-          </a>
+          </button>
 
-          <a href="#impact" onClick={closeMenu}>
+          <button onClick={() => goToSection("impact")}>
             Community wins
-          </a>
+          </button>
 
-          <a href="#join" onClick={closeMenu}>
+          {/* MOBILE JOIN → REGISTER */}
+          <button
+            onClick={() => {
+              closeMenu();
+              navigate("/register");
+            }}
+          >
             Join free
-          </a>
+          </button>
+
         </div>
+
       </nav>
 
 
@@ -150,20 +189,28 @@ function LandingPage() {
 
             <div className="hero-actions">
 
-              <a href="#join" className="btn btn-primary">
+              {/* POST A REQUEST → LOGIN */}
+              <button
+                className="btn btn-primary"
+                onClick={() => navigate("/login")}
+              >
                 Post a request
-              </a>
+              </button>
 
-              <a href="#how" className="btn btn-outline">
+              {/* SEE HOW IT WORKS → SCROLL */}
+              <button
+                className="btn btn-outline"
+                onClick={() => goToSection("how")}
+              >
                 See how it works
-              </a>
+              </button>
 
             </div>
 
           </div>
 
 
-          {/* RIBBON + STICKERS */}
+          {/* ================= RIBBON + STICKERS ================= */}
 
           <div className="ribbon-stage">
 
@@ -182,6 +229,7 @@ function LandingPage() {
                   x2="1"
                   y2="1"
                 >
+
                   <stop
                     offset="0%"
                     stopColor="#f4c542"
@@ -191,6 +239,7 @@ function LandingPage() {
                     offset="100%"
                     stopColor="#e77b3c"
                   />
+
                 </linearGradient>
 
               </defs>
@@ -748,21 +797,24 @@ function LandingPage() {
             to post a request.
           </p>
 
+
           <div className="hero-actions">
 
-            <a
-              href="#join"
+            {/* JOIN SYNERGY → REGISTER */}
+            <button
               className="btn btn-secondary"
+              onClick={() => navigate("/register")}
             >
               Join Synergy
-            </a>
+            </button>
 
-            <a
-              href="#pillars"
+            {/* BROWSE → LOGIN FOR NOW */}
+            <button
               className="btn btn-outline"
+              onClick={() => navigate("/login")}
             >
               Browse open requests
-            </a>
+            </button>
 
           </div>
 
@@ -778,8 +830,10 @@ function LandingPage() {
         <div className="wrap">
 
           <div className="footer-brand">
-  <span className="footer-synergy">SYNERGY</span>
-</div>
+            <span className="footer-synergy">
+              SYNERGY
+            </span>
+          </div>
 
           <span>
             A mutual aid network for campuses

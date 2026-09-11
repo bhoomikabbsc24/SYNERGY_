@@ -1,0 +1,228 @@
+/* =========================================
+   CREATE REQUEST PAGE
+========================================= */
+
+.request-page {
+  min-height: 100vh;
+  background: #f7f3e9;
+  padding: 70px 8%;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.request-header {
+  max-width: 1000px;
+  margin-bottom: 45px;
+}
+
+.request-label {
+  color: #e78a28;
+  font-weight: 800;
+  letter-spacing: 3px;
+  font-size: 15px;
+  margin: 0 0 15px;
+}
+
+.request-header h1 {
+  color: #102d26;
+  font-size: 64px;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.request-header h1 span {
+  color: #f2b525;
+}
+
+.request-subtitle {
+  color: #58727a;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+/* Works whether JSX still says
+   request-card OR create-request-card */
+
+.request-page form.request-card,
+.request-page form.create-request-card {
+  background: #fffdf8;
+  border: 1px solid #ddd7ca;
+  border-radius: 24px;
+  padding: 40px;
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+  box-shadow: 0 15px 40px rgba(16, 45, 38, 0.08);
+
+  /* FORCE FORM VERTICAL */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 0 !important;
+}
+
+
+/* =========================================
+   FORCE EVERY FORM CHILD VERTICAL
+========================================= */
+
+.request-page form.request-card > .form-group,
+.request-page form.create-request-card > .form-group {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  flex: none !important;
+  margin-bottom: 25px;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   LABELS
+========================================= */
+
+.form-group label {
+  display: block !important;
+  width: 100% !important;
+  color: #102d26;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+
+
+/* =========================================
+   INPUTS / SELECT / TEXTAREA
+========================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+
+  font-family: inherit;
+  font-size: 16px;
+  padding: 15px 17px;
+
+  border: 1px solid #d6d1c7;
+  border-radius: 12px;
+  background: white;
+  outline: none;
+}
+
+.form-group textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #102d26;
+}
+
+
+/* =========================================
+   LOCATION + URGENCY
+========================================= */
+
+/* FORCE THESE TO ALSO BE VERTICAL */
+
+.request-page .form-row {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  gap: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+.request-page .form-row .form-group {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  flex: none !important;
+}
+
+
+/* =========================================
+   POST BUTTON
+========================================= */
+
+.request-page .post-request-btn {
+  display: block !important;
+  width: 100% !important;
+  flex: none !important;
+
+  border: none;
+  border-radius: 30px;
+  padding: 17px;
+
+  background: #f5bb2f;
+  color: #102d26;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  cursor: pointer;
+  margin-top: 5px;
+
+  transition: transform 0.2s ease;
+}
+
+.request-page .post-request-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   SUCCESS / ERROR MESSAGE
+========================================= */
+
+.request-page .request-message {
+  display: block !important;
+  width: 100% !important;
+  flex: none !important;
+
+  text-align: center;
+  margin: 20px 0 0;
+
+  font-size: 17px;
+  font-weight: 700;
+  color: #102d26;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .request-page {
+    padding: 40px 5%;
+  }
+
+  .request-header h1 {
+    font-size: 44px;
+  }
+
+  .request-page form.request-card,
+  .request-page form.create-request-card {
+    padding: 25px;
+  }
+}

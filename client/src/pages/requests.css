@@ -1,0 +1,289 @@
+/* ================= REQUESTS PAGE ================= */
+
+.requests-page {
+  min-height: 100vh;
+  background: #f7f3e9;
+  color: #10251f;
+}
+
+/* ================= NAVBAR ================= */
+
+.requests-nav {
+  height: 78px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #fffdf8;
+  border-bottom: 1px solid #ddd7ca;
+}
+
+.requests-logo {
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: #9b1c24;
+}
+
+.requests-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.requests-nav-button {
+  border: none;
+  background: transparent;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+.requests-profile-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border: none;
+  background: transparent;
+
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.requests-profile-circle {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #123d32;
+  color: white;
+}
+
+/* ================= CONTENT ================= */
+
+.requests-content {
+  width: 88%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+/* ================= HEADER ================= */
+
+.requests-header {
+  margin-bottom: 40px;
+}
+
+.requests-header h1 {
+  margin: 0;
+  font-size: clamp(42px, 5vw, 62px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+  color: #10251f;
+}
+
+.requests-header p:last-child {
+  margin-top: 18px;
+  font-size: 18px;
+  color: #60736d;
+  line-height: 1.6;
+}
+
+/* ================= FILTERS ================= */
+
+.requests-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.filter-button {
+  padding: 11px 18px;
+
+  border: 1px solid #d8d1c4;
+  border-radius: 25px;
+
+  background: #fffdf8;
+  color: #10251f;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-button:hover {
+  transform: translateY(-2px);
+  border-color: #9b1c24;
+}
+
+.filter-button.active {
+  background: #123d32;
+  color: white;
+  border-color: #123d32;
+}
+
+/* ================= REQUEST LIST ================= */
+
+.requests-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ================= REQUEST CARD ================= */
+
+.request-card {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  padding: 26px;
+
+  background: #fffdf8;
+  border: 1px solid #ddd7ca;
+  border-radius: 18px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.request-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(16, 37, 31, 0.08);
+}
+
+/* ================= ICON ================= */
+
+.request-card-icon {
+  width: 60px;
+  height: 60px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+  background: #eef1df;
+
+  font-size: 27px;
+}
+
+/* ================= REQUEST CONTENT ================= */
+
+.request-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.request-card-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+.request-category {
+  color: #e58c35;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.request-time {
+  color: #8a9792;
+  font-size: 12px;
+}
+
+.request-card-content h2 {
+  margin: 0 0 8px;
+
+  font-size: 20px;
+  line-height: 1.3;
+
+  color: #10251f;
+}
+
+.request-card-content p {
+  margin: 0 0 12px;
+
+  color: #60736d;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.request-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+
+  color: #60736d;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ================= OFFER BUTTON ================= */
+
+.offer-button {
+  flex-shrink: 0;
+
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 25px;
+
+  background: #f5bb2f;
+  color: #10251f;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.offer-button:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+  .requests-content {
+    width: 90%;
+    padding: 45px 0;
+  }
+
+  .requests-nav {
+    padding: 0 5%;
+  }
+
+  .requests-header h1 {
+    font-size: 42px;
+  }
+
+  .request-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .request-card-content {
+    width: calc(100% - 82px);
+  }
+
+  .offer-button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,299 @@
+/* ================= RESOURCES PAGE ================= */
+
+.resources-page {
+  min-height: 100vh;
+  background: #f7f3e9;
+  color: #10251f;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.resources-nav {
+  height: 78px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fffdf8;
+  border-bottom: 1px solid #ddd7ca;
+}
+
+.resources-logo {
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: #9b1c24;
+}
+
+.resources-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.resources-nav-button {
+  border: none;
+  background: transparent;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+.resources-profile-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.resources-profile-circle {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #123d32;
+  color: white;
+}
+
+
+/* ================= CONTENT ================= */
+
+.resources-content {
+  width: 88%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+
+/* ================= HEADER ================= */
+
+.resources-header {
+  margin-bottom: 40px;
+}
+
+.resources-header h1 {
+  margin: 0;
+  font-size: clamp(42px, 5vw, 62px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+  color: #10251f;
+}
+
+.resources-header p:last-child {
+  max-width: 700px;
+  margin-top: 18px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #60736d;
+}
+
+
+/* ================= FILTERS ================= */
+
+.resources-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+/* Compact filter buttons */
+
+.resource-filter-button {
+  padding: 11px 18px;
+  border: 1px solid #d8d1c4;
+  border-radius: 25px;
+  background: #fffdf8;
+  color: #10251f;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.resource-filter-button:hover {
+  transform: translateY(-2px);
+  border-color: #9b1c24;
+}
+
+.resource-filter-button.active {
+  background: #123d32;
+  color: white;
+  border-color: #123d32;
+}
+
+
+/* ================= RESOURCE LIST ================= */
+
+.resources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+/* ================= RESOURCE CARD ================= */
+
+.resource-card {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 26px;
+  background: #fffdf8;
+  border: 1px solid #ddd7ca;
+  border-radius: 18px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(16, 37, 31, 0.08);
+}
+
+
+/* ================= ICON ================= */
+
+.resource-card-icon {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background: #eef1df;
+  font-size: 27px;
+}
+
+
+/* ================= RESOURCE INFO ================= */
+
+.resource-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.resource-card-type {
+  display: inline-block;
+  margin-bottom: 7px;
+  color: #e58c35;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.resource-card-content h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  line-height: 1.3;
+  color: #10251f;
+}
+
+.resource-card-content p {
+  margin: 0 0 12px;
+  color: #60736d;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.resource-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #60736d;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* ================= VIEW BUTTON ================= */
+
+.resource-view-button {
+  flex-shrink: 0;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  background: #f5bb2f;
+  color: #10251f;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.resource-view-button:hover {
+  transform: translateY(-2px);
+}
+
+
+/* ================= NO RESOURCES ================= */
+
+.no-resources {
+  background: #fffdf8;
+  border: 1px solid #ddd7ca;
+  border-radius: 18px;
+  padding: 50px;
+  text-align: center;
+}
+
+.no-resources h2 {
+  margin: 0 0 10px;
+  color: #10251f;
+}
+
+.no-resources p {
+  margin: 0;
+  color: #60736d;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+  .resources-content {
+    width: 90%;
+    padding: 45px 0;
+  }
+
+  .resources-nav {
+    padding: 0 5%;
+  }
+
+  .resources-header h1 {
+    font-size: 42px;
+  }
+
+  .resources-filters {
+    gap: 10px;
+  }
+
+  .resource-filter-button {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .resource-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .resource-card-content {
+    width: calc(100% - 82px);
+  }
+
+  .resource-view-button {
+    width: 100%;
+  }
+}
