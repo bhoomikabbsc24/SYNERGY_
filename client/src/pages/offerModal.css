@@ -1,0 +1,289 @@
+/* =========================================
+   SYNERGY — OFFER MODAL
+   ========================================= */
+
+.offer-modal-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+
+  width: 100vw !important;
+  height: 100vh !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  padding: 24px !important;
+  box-sizing: border-box !important;
+
+  background: rgba(10, 28, 23, 0.68) !important;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  z-index: 99999 !important;
+
+  animation: synergyOverlay 0.2s ease-out;
+}
+
+
+/* MODAL */
+
+.offer-modal {
+  position: relative !important;
+
+  width: 100% !important;
+  max-width: 520px !important;
+
+  padding: 42px !important;
+  box-sizing: border-box !important;
+
+  background: #fffdf8 !important;
+
+  border: 1px solid rgba(16, 37, 31, 0.08) !important;
+  border-radius: 28px !important;
+
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, 0.28),
+    0 10px 30px rgba(16, 37, 31, 0.15) !important;
+
+  animation: synergyModal 0.25s ease-out;
+}
+
+
+/* CLOSE */
+
+.offer-modal-close {
+  position: absolute !important;
+
+  top: 18px !important;
+  right: 18px !important;
+
+  width: 38px !important;
+  height: 38px !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border: none !important;
+  border-radius: 50% !important;
+
+  background: #f2eee4 !important;
+
+  color: #10251f !important;
+
+  font-size: 25px !important;
+  font-weight: 400 !important;
+
+  cursor: pointer !important;
+
+  transition: all 0.2s ease !important;
+}
+
+.offer-modal-close:hover {
+  background: #e5dfd1 !important;
+  transform: rotate(90deg) !important;
+}
+
+
+/* LABEL */
+
+.offer-modal-label {
+  margin: 0 0 12px !important;
+
+  color: #d87926 !important;
+
+  font-size: 12px !important;
+  font-weight: 900 !important;
+
+  letter-spacing: 2.5px !important;
+  text-transform: uppercase !important;
+}
+
+
+/* TITLE */
+
+.offer-modal h2 {
+  margin: 0 40px 22px 0 !important;
+
+  color: #10251f !important;
+
+  font-size: 30px !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+
+  letter-spacing: -0.6px !important;
+}
+
+
+/* REQUEST BOX */
+
+.offer-modal-request {
+  margin: 0 0 20px !important;
+
+  padding: 18px 20px !important;
+
+  background: #f5f1e8 !important;
+
+  border-left: 4px solid #f0a72c !important;
+  border-radius: 12px !important;
+
+  color: #10251f !important;
+
+  font-size: 16px !important;
+  font-weight: 750 !important;
+
+  line-height: 1.5 !important;
+
+  box-sizing: border-box !important;
+}
+
+
+/* DESCRIPTION */
+
+.offer-modal-description {
+  margin: 0 !important;
+
+  color: #667873 !important;
+
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+}
+
+
+/* ACTIONS */
+
+.offer-modal-actions {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+
+  gap: 12px !important;
+
+  margin-top: 32px !important;
+}
+
+
+/* CANCEL */
+
+.offer-cancel-button {
+  height: 46px !important;
+
+  padding: 0 22px !important;
+
+  border: 1px solid #d4cec1 !important;
+  border-radius: 999px !important;
+
+  background: #fffdf8 !important;
+
+  color: #10251f !important;
+
+  font-family: inherit !important;
+
+  font-size: 14px !important;
+  font-weight: 750 !important;
+
+  cursor: pointer !important;
+
+  transition: all 0.2s ease !important;
+}
+
+.offer-cancel-button:hover {
+  background: #f3efe6 !important;
+  border-color: #aaa294 !important;
+}
+
+
+/* SEND OFFER */
+
+.offer-modal-actions .details-help-button {
+  height: 46px !important;
+
+  padding: 0 24px !important;
+
+  border: none !important;
+  border-radius: 999px !important;
+
+  background: #f7b928 !important;
+
+  color: #10251f !important;
+
+  font-family: inherit !important;
+
+  font-size: 14px !important;
+  font-weight: 850 !important;
+
+  cursor: pointer !important;
+
+  box-shadow: 0 7px 18px rgba(247, 185, 40, 0.25) !important;
+
+  transition: all 0.2s ease !important;
+}
+
+.offer-modal-actions .details-help-button:hover {
+  background: #f2ad18 !important;
+
+  transform: translateY(-2px) !important;
+
+  box-shadow: 0 10px 24px rgba(247, 185, 40, 0.32) !important;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes synergyOverlay {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes synergyModal {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .offer-modal-overlay {
+    padding: 16px !important;
+  }
+
+  .offer-modal {
+    padding: 34px 24px 26px !important;
+    border-radius: 24px !important;
+  }
+
+  .offer-modal h2 {
+    font-size: 25px !important;
+  }
+
+  .offer-modal-actions {
+    flex-direction: column-reverse !important;
+  }
+
+  .offer-cancel-button,
+  .offer-modal-actions .details-help-button {
+    width: 100% !important;
+  }
+}

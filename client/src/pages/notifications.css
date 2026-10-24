@@ -262,5 +262,205 @@
   .notification-card {
     padding: 20px;
   }
+/* ================= OFFER NOTIFICATION ================= */
 
+.offer-notification {
+  border-left: 4px solid #f5bb2f;
+}
+
+.offer-notification-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.accept-offer-button {
+  padding: 11px 20px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #123d32;
+  color: #fffdf8;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.accept-offer-button:hover {
+  background: #0d3027;
+  transform: translateY(-2px);
+}
+
+.reject-offer-button {
+  padding: 11px 20px;
+
+  border: 1px solid #d8d1c4;
+  border-radius: 999px;
+
+  background: #fffdf8;
+  color: #9b1c24;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.reject-offer-button:hover {
+  background: #f8eeee;
+  border-color: #9b1c24;
+}
+
+.offer-status {
+  display: inline-flex;
+  align-items: center;
+
+  margin-top: 18px;
+  padding: 9px 15px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.offer-status.accepted {
+  background: #e8f1eb;
+  color: #123d32;
+}
+
+.offer-status.rejected {
+  background: #f8eeee;
+  color: #9b1c24;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 650px) {
+
+  .offer-notification-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .accept-offer-button,
+  .reject-offer-button {
+    width: 100%;
+  }
+
+}
+/* ================= OFFER ACTION BUTTONS ================= */
+
+.offer-notification {
+  border-left: 4px solid #f5bb2f;
+}
+
+.offer-notification-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.accept-offer-button {
+  padding: 11px 20px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #123d32;
+  color: #fffdf8;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.accept-offer-button:hover {
+  background: #0d3027;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(18, 61, 50, 0.2);
+}
+
+.reject-offer-button {
+  padding: 11px 20px;
+
+  border: 1px solid #d8d1c4;
+  border-radius: 999px;
+
+  background: #fffdf8;
+  color: #9b1c24;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.reject-offer-button:hover {
+  background: #f8eeee;
+  border-color: #9b1c24;
+  transform: translateY(-2px);
+}
+
+
+/* ================= OFFER STATUS ================= */
+
+.offer-status {
+  display: inline-flex;
+  align-items: center;
+
+  margin-top: 18px;
+  padding: 9px 15px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.offer-status.accepted {
+  background: #e8f1eb;
+  color: #123d32;
+}
+
+.offer-status.rejected {
+  background: #f8eeee;
+  color: #9b1c24;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 650px) {
+
+  .offer-notification-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .accept-offer-button,
+  .reject-offer-button {
+    width: 100%;
+  }
+
+}
 }

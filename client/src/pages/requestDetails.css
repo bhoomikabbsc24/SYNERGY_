@@ -11,11 +11,9 @@
 .request-details-nav {
   height: 78px;
   padding: 0 6%;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   background: #fffdf8;
   border-bottom: 1px solid #ddd7ca;
 }
@@ -36,7 +34,6 @@
 .request-details-nav-button {
   border: none;
   background: transparent;
-
   font-size: 21px;
   cursor: pointer;
 }
@@ -45,26 +42,20 @@
   display: flex;
   align-items: center;
   gap: 10px;
-
   border: none;
   background: transparent;
-
   font-size: 15px;
   font-weight: 700;
-
   cursor: pointer;
 }
 
 .request-details-profile-circle {
   width: 38px;
   height: 38px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 50%;
-
   background: #123d32;
   color: white;
 }
@@ -74,7 +65,6 @@
 .request-details-content {
   width: 88%;
   max-width: 1050px;
-
   margin: 0 auto;
   padding: 65px 0;
 }
@@ -83,15 +73,11 @@
 
 .back-to-requests {
   margin-bottom: 25px;
-
   border: none;
   background: transparent;
-
   color: #9b1c24;
-
   font-size: 15px;
   font-weight: 800;
-
   cursor: pointer;
 }
 
@@ -103,11 +89,9 @@
 
 .request-details-card {
   padding: 45px;
-
   background: #fffdf8;
   border: 1px solid #ddd7ca;
   border-radius: 22px;
-
   box-shadow: 0 12px 35px rgba(16, 37, 31, 0.06);
 }
 
@@ -117,27 +101,22 @@
   display: flex;
   align-items: center;
   gap: 18px;
-
   margin-bottom: 30px;
 }
 
 .request-details-icon {
   width: 65px;
   height: 65px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 17px;
   background: #eef1df;
-
   font-size: 30px;
 }
 
 .request-details-category {
   color: #e58c35;
-
   font-size: 13px;
   font-weight: 900;
   letter-spacing: 1.5px;
@@ -147,13 +126,10 @@
 
 .request-details-card h1 {
   max-width: 800px;
-
   margin: 0;
-
   font-size: clamp(38px, 5vw, 58px);
   line-height: 1.08;
   letter-spacing: -2px;
-
   color: #10251f;
 }
 
@@ -161,11 +137,8 @@
 
 .request-details-description {
   max-width: 800px;
-
   margin: 25px 0 30px;
-
   color: #60736d;
-
   font-size: 18px;
   line-height: 1.7;
 }
@@ -182,9 +155,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-
   color: #60736d;
-
   font-size: 14px;
   font-weight: 600;
 }
@@ -193,37 +164,68 @@
 
 .request-details-divider {
   height: 1px;
-
   margin: 35px 0;
-
   background: #ddd7ca;
 }
 
 /* ================= HELP SECTION ================= */
 
 .help-section {
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 28px auto 0;
+
+  padding: 32px 38px;
+
+  box-sizing: border-box;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   gap: 30px;
+
+  background: #123d32;
+
+  border-radius: 20px;
+
+  box-shadow: 0 12px 30px rgba(16, 37, 31, 0.12);
+}
+
+.help-section-text {
+  flex: 1;
+}
+
+.help-section-label {
+  margin: 0 0 8px !important;
+
+  color: #f5bb2f !important;
+
+  font-size: 11px !important;
+  font-weight: 900 !important;
+
+  letter-spacing: 2px !important;
 }
 
 .help-section h2 {
   margin: 0 0 7px;
 
-  font-size: 24px;
-  color: #10251f;
+  color: #fffdf8;
+
+  font-size: 25px;
+  font-weight: 800;
 }
 
-.help-section p {
-  margin: 0;
+.help-section-description {
+  margin: 0 !important;
 
-  color: #60736d;
-  font-size: 14px;
+  color: rgba(255, 253, 248, 0.72) !important;
+
+  font-size: 14px !important;
 }
 
-.details-help-button {
+.help-section .details-help-button {
   flex-shrink: 0;
 
   padding: 14px 25px;
@@ -232,6 +234,7 @@
   border-radius: 28px;
 
   background: #f5bb2f;
+
   color: #10251f;
 
   font-size: 15px;
@@ -239,17 +242,289 @@
 
   cursor: pointer;
 
-  transition: transform 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-.details-help-button:hover {
+.help-section .details-help-button:hover {
   transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(245, 187, 47, 0.25);
+}
+
+
+/* ================= OFFER SUCCESS ================= */
+
+.offer-success {
+  background: #eef1df;
+}
+
+.offer-success h2 {
+  color: #123d32;
+}
+
+.offer-success .help-section-description {
+  color: #60736d !important;
+}
+
+.offer-success .help-section-label {
+  color: #9b1c24 !important;
+}
+
+/* ================================================= */
+/* OFFER MODAL */
+/* ================================================= */
+
+.offer-modal-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+
+  width: 100vw !important;
+  height: 100vh !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  padding: 24px !important;
+  box-sizing: border-box !important;
+
+  background: rgba(10, 28, 23, 0.68) !important;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  z-index: 99999 !important;
+
+  animation: offerOverlayIn 0.2s ease-out;
+}
+
+/* ================= MODAL CARD ================= */
+
+.offer-modal {
+  position: relative !important;
+
+  width: 100% !important;
+  max-width: 520px !important;
+
+  padding: 42px !important;
+  box-sizing: border-box !important;
+
+  background: #fffdf8 !important;
+
+  border: 1px solid rgba(16, 37, 31, 0.08) !important;
+  border-radius: 28px !important;
+
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, 0.28),
+    0 10px 30px rgba(16, 37, 31, 0.15) !important;
+
+  animation: offerModalIn 0.25s ease-out;
+}
+
+/* ================= CLOSE BUTTON ================= */
+
+.offer-modal-close {
+  position: absolute !important;
+
+  top: 18px !important;
+  right: 18px !important;
+
+  width: 38px !important;
+  height: 38px !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border: none !important;
+  border-radius: 50% !important;
+
+  background: #f2eee4 !important;
+
+  color: #10251f !important;
+
+  font-size: 25px !important;
+  font-weight: 400 !important;
+
+  line-height: 1 !important;
+
+  cursor: pointer !important;
+
+  transition: all 0.2s ease !important;
+}
+
+.offer-modal-close:hover {
+  background: #e5dfd1 !important;
+  transform: rotate(90deg) !important;
+}
+
+/* ================= MODAL LABEL ================= */
+
+.offer-modal-label {
+  margin: 0 0 12px !important;
+
+  color: #d87926 !important;
+
+  font-size: 12px !important;
+  font-weight: 900 !important;
+
+  letter-spacing: 2.5px !important;
+  text-transform: uppercase !important;
+}
+
+/* ================= MODAL TITLE ================= */
+
+.offer-modal h2 {
+  margin: 0 40px 22px 0 !important;
+
+  color: #10251f !important;
+
+  font-size: 30px !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+
+  letter-spacing: -0.6px !important;
+}
+
+/* ================= REQUEST BOX ================= */
+
+.offer-modal-request {
+  margin: 0 0 20px !important;
+
+  padding: 18px 20px !important;
+
+  background: #f5f1e8 !important;
+
+  border-left: 4px solid #f0a72c !important;
+  border-radius: 12px !important;
+
+  color: #10251f !important;
+
+  font-size: 16px !important;
+  font-weight: 750 !important;
+
+  line-height: 1.5 !important;
+
+  box-sizing: border-box !important;
+}
+
+/* ================= MODAL DESCRIPTION ================= */
+
+.offer-modal-description {
+  margin: 0 !important;
+
+  color: #667873 !important;
+
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+}
+
+/* ================= MODAL BUTTONS ================= */
+
+.offer-modal-actions {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+
+  gap: 12px !important;
+
+  margin-top: 32px !important;
+}
+
+/* ================= CANCEL ================= */
+
+.offer-cancel-button {
+  min-width: 100px !important;
+  height: 46px !important;
+
+  padding: 0 22px !important;
+
+  border: 1px solid #d4cec1 !important;
+  border-radius: 999px !important;
+
+  background: #fffdf8 !important;
+
+  color: #10251f !important;
+
+  font-family: inherit !important;
+
+  font-size: 14px !important;
+  font-weight: 750 !important;
+
+  cursor: pointer !important;
+
+  transition: all 0.2s ease !important;
+}
+
+.offer-cancel-button:hover {
+  background: #f3efe6 !important;
+  border-color: #aaa294 !important;
+}
+
+/* ================= SEND OFFER ================= */
+
+.offer-modal-actions .details-help-button {
+  min-width: 145px !important;
+  height: 46px !important;
+
+  padding: 0 24px !important;
+
+  border: none !important;
+  border-radius: 999px !important;
+
+  background: #f7b928 !important;
+
+  color: #10251f !important;
+
+  font-family: inherit !important;
+
+  font-size: 14px !important;
+  font-weight: 850 !important;
+
+  cursor: pointer !important;
+
+  box-shadow: 0 7px 18px rgba(247, 185, 40, 0.25) !important;
+
+  transition: all 0.2s ease !important;
+}
+
+.offer-modal-actions .details-help-button:hover {
+  background: #f2ad18 !important;
+
+  transform: translateY(-2px) !important;
+
+  box-shadow: 0 10px 24px rgba(247, 185, 40, 0.32) !important;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes offerOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes offerModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 /* ================= MOBILE ================= */
-
 @media (max-width: 650px) {
-
   .request-details-content {
     width: 90%;
     padding: 45px 0;
@@ -274,10 +549,40 @@
   .help-section {
     align-items: flex-start;
     flex-direction: column;
+    padding: 28px;
   }
 
-  .details-help-button {
+  .help-section .details-help-button {
     width: 100%;
   }
 
+  /* MODAL MOBILE */
+
+  .offer-modal-overlay {
+    padding: 16px !important;
+  }
+
+  .offer-modal {
+    padding: 34px 24px 28px !important;
+    border-radius: 24px !important;
+  }
+
+  .offer-modal h2 {
+    font-size: 25px !important;
+  }
+
+  .offer-modal-request {
+    font-size: 15px !important;
+    padding: 15px 16px !important;
+  }
+
+  .offer-modal-actions {
+    flex-direction: column-reverse !important;
+    width: 100% !important;
+  }
+
+  .offer-cancel-button,
+  .offer-modal-actions .details-help-button {
+    width: 100% !important;
+  }
 }

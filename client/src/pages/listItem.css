@@ -1,0 +1,399 @@
+/* ================= LIST ITEM PAGE ================= */
+
+.list-item-page {
+  min-height: 100vh;
+  background: #f7f3e9;
+  color: #10251f;
+}
+
+/* ================= NAVBAR ================= */
+
+.list-item-nav {
+  height: 78px;
+  padding: 0 6%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #fffdf8;
+  border-bottom: 1px solid #ddd7ca;
+}
+
+.list-item-logo {
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: #9b1c24;
+}
+
+.list-item-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.list-item-nav-button {
+  border: none;
+  background: transparent;
+
+  font-size: 21px;
+  cursor: pointer;
+}
+
+.list-item-profile-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border: none;
+  background: transparent;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.list-item-profile-circle {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #123d32;
+  color: white;
+}
+
+/* ================= CONTENT ================= */
+
+.list-item-content {
+  width: 88%;
+  max-width: 850px;
+
+  margin: 0 auto;
+  padding: 55px 0 80px;
+}
+
+/* ================= BACK BUTTON ================= */
+
+.list-item-back-button {
+  margin-bottom: 30px;
+
+  border: none;
+  background: transparent;
+
+  color: #9b1c24;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.list-item-back-button:hover {
+  text-decoration: underline;
+}
+
+/* ================= HEADER ================= */
+
+.list-item-header {
+  margin-bottom: 35px;
+}
+
+.list-item-header .small-heading {
+  margin-bottom: 10px;
+}
+
+.list-item-header h1 {
+  margin: 0 0 14px;
+
+  font-size: clamp(40px, 6vw, 60px);
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+
+  color: #10251f;
+}
+
+.list-item-header > p:last-child {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #60736d;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* ================= FORM CARD ================= */
+
+.list-item-card {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  padding: 40px;
+
+  box-sizing: border-box;
+
+  background: #fffdf8;
+
+  border: 1px solid #ddd7ca;
+  border-radius: 24px;
+
+  box-shadow: 0 15px 40px rgba(16, 37, 31, 0.07);
+}
+
+/* ================= FORM GROUP ================= */
+
+.list-item-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.list-item-form-group label {
+  color: #10251f;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.list-item-form-group input,
+.list-item-form-group select,
+.list-item-form-group textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 14px 16px;
+
+  border: 1px solid #d8d1c4;
+  border-radius: 12px;
+
+  background: #fffdf8;
+
+  color: #10251f;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.list-item-form-group input::placeholder,
+.list-item-form-group textarea::placeholder {
+  color: #9a9f99;
+}
+
+.list-item-form-group input:focus,
+.list-item-form-group select:focus,
+.list-item-form-group textarea:focus {
+  border-color: #123d32;
+
+  box-shadow: 0 0 0 3px rgba(18, 61, 50, 0.08);
+}
+
+.list-item-form-group textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+/* ================= SUBMIT ================= */
+
+.list-item-submit-button {
+  align-self: flex-start;
+
+  margin-top: 8px;
+
+  padding: 14px 26px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #f5bb2f;
+
+  color: #10251f;
+
+  font-family: inherit;
+
+  font-size: 15px;
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.list-item-submit-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(245, 187, 47, 0.25);
+}
+
+/* ================= SUCCESS ================= */
+
+.list-item-success {
+  padding: 55px 45px;
+
+  text-align: center;
+
+  background: #fffdf8;
+
+  border: 1px solid #ddd7ca;
+  border-radius: 24px;
+
+  box-shadow: 0 15px 40px rgba(16, 37, 31, 0.07);
+}
+
+.list-item-success-icon {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #123d32;
+  color: #fffdf8;
+
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.list-item-success .small-heading {
+  color: #d87926;
+}
+
+.list-item-success h2 {
+  margin: 10px 0 12px;
+
+  color: #10251f;
+
+  font-size: 30px;
+}
+
+.list-item-success > p:not(.small-heading) {
+  max-width: 550px;
+
+  margin: 0 auto;
+
+  color: #60736d;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ================= SUCCESS BUTTONS ================= */
+
+.list-item-success-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+.list-item-primary-button,
+.list-item-secondary-button {
+  padding: 13px 22px;
+
+  border-radius: 999px;
+
+  font-family: inherit;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.list-item-primary-button {
+  border: none;
+
+  background: #123d32;
+  color: #fffdf8;
+}
+
+.list-item-primary-button:hover {
+  background: #0d3027;
+  transform: translateY(-2px);
+}
+
+.list-item-secondary-button {
+  border: 1px solid #d8d1c4;
+
+  background: #fffdf8;
+  color: #10251f;
+}
+
+.list-item-secondary-button:hover {
+  background: #f3efe5;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 650px) {
+  .list-item-nav {
+    padding: 0 5%;
+  }
+
+  .list-item-content {
+    width: 90%;
+    padding: 45px 0 60px;
+  }
+
+  .list-item-header h1 {
+    font-size: 42px;
+  }
+
+  .list-item-header > p:last-child {
+    font-size: 16px;
+  }
+
+  .list-item-card {
+    padding: 28px;
+    gap: 21px;
+  }
+
+  .list-item-submit-button {
+    width: 100%;
+  }
+
+  .list-item-success {
+    padding: 40px 25px;
+  }
+
+  .list-item-success h2 {
+    font-size: 25px;
+  }
+
+  .list-item-success-actions {
+    flex-direction: column;
+  }
+
+  .list-item-primary-button,
+  .list-item-secondary-button {
+    width: 100%;
+  }
+}

@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./borrowReturn.css";
 
 function BorrowReturn() {
   const [activeFilter, setActiveFilter] = useState("All items");
+  const navigate = useNavigate();
 
   const items = [
     {
@@ -78,6 +80,7 @@ function BorrowReturn() {
     <div className="borrow-return-page">
 
       {/* NAVBAR */}
+
       <nav className="borrow-return-nav">
 
         <div className="borrow-return-logo">
@@ -86,11 +89,19 @@ function BorrowReturn() {
 
         <div className="borrow-return-nav-right">
 
-          <button className="borrow-return-nav-button">
+          <button
+            className="borrow-return-nav-button"
+            onClick={() => navigate("/notifications")}
+            title="Notifications"
+          >
             🔔
           </button>
 
-          <button className="borrow-return-profile-button">
+          <button
+            className="borrow-return-profile-button"
+            onClick={() => navigate("/profile")}
+            title="Profile"
+          >
             <span className="borrow-return-profile-circle">
               B
             </span>
@@ -103,9 +114,11 @@ function BorrowReturn() {
       </nav>
 
       {/* PAGE CONTENT */}
+
       <main className="borrow-return-content">
 
         {/* HEADER */}
+
         <section className="borrow-return-header">
 
           <p className="small-heading">
@@ -124,6 +137,7 @@ function BorrowReturn() {
         </section>
 
         {/* FILTERS */}
+
         <section className="borrow-return-filters">
 
           {filters.map((filter) => (
@@ -141,6 +155,7 @@ function BorrowReturn() {
         </section>
 
         {/* ITEMS */}
+
         <section className="borrow-items-list">
 
           {filteredItems.map((item) => (
@@ -189,7 +204,12 @@ function BorrowReturn() {
 
               </div>
 
-              <button className="borrow-button">
+              <button
+                className="borrow-button"
+                onClick={() =>
+                  alert(`Borrow request started for ${item.title}!`)
+                }
+              >
                 Borrow →
               </button>
 
@@ -209,6 +229,7 @@ function BorrowReturn() {
         </section>
 
         {/* LEND CTA */}
+
         <section className="lend-section">
 
           <div>
@@ -225,7 +246,10 @@ function BorrowReturn() {
             </p>
           </div>
 
-          <button className="lend-button">
+          <button
+            className="lend-button"
+            onClick={() => navigate("/list-item")}
+          >
             List an item →
           </button>
 

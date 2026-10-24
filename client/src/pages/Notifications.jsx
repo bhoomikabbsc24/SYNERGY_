@@ -1,19 +1,25 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./notifications.css";
 
 function Notifications() {
+  const navigate = useNavigate();
+
   const [notifications, setNotifications] = useState([
     {
       id: 1,
+      type: "offer",
       icon: "🤝",
       title: "Someone offered to help with your request",
       description:
         "A student offered to share their Data Structures notes with you.",
       time: "5 minutes ago",
       unread: true,
+      offerStatus: "pending",
     },
     {
       id: 2,
+      type: "resource",
       icon: "📚",
       title: "Your resource was shared successfully",
       description:
@@ -23,6 +29,7 @@ function Notifications() {
     },
     {
       id: 3,
+      type: "borrow",
       icon: "📦",
       title: "Your borrow request was accepted",
       description:
@@ -32,6 +39,7 @@ function Notifications() {
     },
     {
       id: 4,
+      type: "welcome",
       icon: "🔔",
       title: "Welcome to the SYNERGY community",
       description:
@@ -50,10 +58,39 @@ function Notifications() {
     );
   };
 
+  const handleAccept = (id) => {
+    setNotifications((currentNotifications) =>
+      currentNotifications.map((notification) =>
+        notification.id === id
+          ? {
+              ...notification,
+              unread: false,
+              offerStatus: "accepted",
+            }
+          : notification
+      )
+    );
+  };
+
+  const handleReject = (id) => {
+    setNotifications((currentNotifications) =>
+      currentNotifications.map((notification) =>
+        notification.id === id
+          ? {
+              ...notification,
+              unread: false,
+              offerStatus: "rejected",
+            }
+          : notification
+      )
+    );
+  };
+
   return (
     <div className="notifications-page">
 
-      {/* NAVBAR */}
+      {/* ================= NAVBAR ================= */}
+
       <nav className="notifications-nav">
 
         <div className="notifications-logo">
@@ -62,11 +99,19 @@ function Notifications() {
 
         <div className="notifications-nav-right">
 
-          <button className="notifications-nav-button">
+          <button
+            className="notifications-nav-button"
+            onClick={() => navigate("/notifications")}
+            title="Notifications"
+          >
             🔔
           </button>
 
-          <button className="notifications-profile-button">
+          <button
+            className="notifications-profile-button"
+            onClick={() => navigate("/profile")}
+            title="Profile"
+          >
             <span className="notifications-profile-circle">
               B
             </span>
@@ -78,13 +123,16 @@ function Notifications() {
 
       </nav>
 
-      {/* PAGE CONTENT */}
+      {/* ================= CONTENT ================= */}
+
       <main className="notifications-content">
 
-        {/* HEADER */}
+        {/* ================= HEADER ================= */}
+
         <section className="notifications-header">
 
           <div>
+
             <p className="small-heading">
               STAY CONNECTED
             </p>
@@ -97,6 +145,7 @@ function Notifications() {
               Keep track of requests, offers and activity from your campus
               community.
             </p>
+
           </div>
 
           <button
@@ -108,10 +157,12 @@ function Notifications() {
 
         </section>
 
-        {/* NOTIFICATIONS */}
+        {/* ================= NOTIFICATIONS ================= */}
+
         <section className="notifications-list">
 
           {notifications.map((notification) => (
+
             <article
               className={`notification-card ${
                 notification.unread ? "unread" : ""
@@ -145,9 +196,118 @@ function Notifications() {
                   {notification.time}
                 </span>
 
+                {/* ================= OFFER ACTIONS ================= */}
+
+                {notification.type === "offer" &&
+                  notification.offerStatus === "pending" && (
+
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "12px",
+                        marginTop: "18px",
+                      }}
+                    >
+
+                      {/* ACCEPT */}
+
+                      <button
+                        onClick={() =>
+                          handleAccept(notification.id)
+                        }
+                        style={{
+                          padding: "11px 21px",
+                          border: "none",
+                          borderRadius: "999px",
+                          background: "#123d32",
+                          color: "#fffdf8",
+                          fontFamily: "inherit",
+                          fontSize: "13px",
+                          fontWeight: "800",
+                          cursor: "pointer",
+                          boxShadow:
+                            "0 6px 16px rgba(18, 61, 50, 0.18)",
+                        }}
+                      >
+                        Accept offer ✓
+                      </button>
+
+                      {/* REJECT */}
+
+                      <button
+                        onClick={() =>
+                          handleReject(notification.id)
+                        }
+                        style={{
+                          padding: "11px 21px",
+                          border: "1px solid #d8d1c4",
+                          borderRadius: "999px",
+                          background: "#fffdf8",
+                          color: "#9b1c24",
+                          fontFamily: "inherit",
+                          fontSize: "13px",
+                          fontWeight: "800",
+                          cursor: "pointer",
+                        }}
+                      >
+                        Reject
+                      </button>
+
+                    </div>
+
+                  )}
+
+                {/* ================= ACCEPTED ================= */}
+
+                {notification.type === "offer" &&
+                  notification.offerStatus === "accepted" && (
+
+                    <div
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        marginTop: "18px",
+                        padding: "9px 16px",
+                        borderRadius: "999px",
+                        background: "#e8f1eb",
+                        color: "#123d32",
+                        fontSize: "13px",
+                        fontWeight: "800",
+                      }}
+                    >
+                      ✓ Offer accepted
+                    </div>
+
+                  )}
+
+                {/* ================= REJECTED ================= */}
+
+                {notification.type === "offer" &&
+                  notification.offerStatus === "rejected" && (
+
+                    <div
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        marginTop: "18px",
+                        padding: "9px 16px",
+                        borderRadius: "999px",
+                        background: "#f8eeee",
+                        color: "#9b1c24",
+                        fontSize: "13px",
+                        fontWeight: "800",
+                      }}
+                    >
+                      Offer declined
+                    </div>
+
+                  )}
+
               </div>
 
             </article>
+
           ))}
 
         </section>

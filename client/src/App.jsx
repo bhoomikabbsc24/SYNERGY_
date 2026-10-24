@@ -12,6 +12,7 @@ import ShareResource from "./pages/ShareResource";
 import BorrowReturn from "./pages/BorrowReturn";
 import Notifications from "./pages/Notifications";
 import Profile from "./pages/Profile";
+import ListItem from "./pages/ListItem";
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
         <Route path="/notifications" element={<Notifications />} />
 
         <Route path="/profile" element={<Profile />} />
+
+        <Route path="/list-item" element={<ListItem />} />
+
 
       </Routes>
     </BrowserRouter>
